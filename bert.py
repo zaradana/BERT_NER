@@ -127,11 +127,12 @@ class Ner:
 model = Ner("out_base/")
 
 #%%
-input_seq = "Dr. Franklin provides us a chance to celebrate Thanksgiving, the Italian way, offering delicious food, wine, music, and dancing.  \
-                Jackson is in love with Elizabeth.  \
-                Richard works at VMWare, Georgia. Jackson is from Elizabeth  , New York.     \
-                Bob and Alice are very close friends. They are also secretely in love! This is a very well kept secret in San Francisco but Tyler knows    \
-                Dr. Leo Mirani from New York loves to shop at Target"
+input_seq = "Dr. Franklin provides us a chance to celebrate Thanksgiving, the Italian  \
+            way, offering delicious food, wine, music, and dancing. Jackson is in love \
+            with Elizabeth. Richard works at VMWare, Georgia. Jackson is from Elizabeth  , \
+            New York. Bob and Alice are very close friends. They are also secretely in love! \
+            This is a very well kept secret in San Francisco but Tyler knows    \
+            Dr. Leo Mirani from New York loves to shop at Target"
 
 print('')
 print('--------------------------------')

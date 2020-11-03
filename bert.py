@@ -56,7 +56,7 @@ class Ner:
         valid_positions = []
         for i,word in enumerate(words):
             token = self.tokenizer.tokenize(word)
-            if len(tokens) + len(token) < self.model.bert.config.max_position_embeddings:
+            if len(tokens) + len(token) < self.max_seq_length:
                 tokens.extend(token)
                 for i in range(len(token)):
                     if i == 0:

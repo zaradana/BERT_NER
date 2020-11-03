@@ -127,64 +127,64 @@ class Ner:
 model = Ner("out_base/")
 
 #%%
-# input_seq = "Dr. Franklin provides us a chance to celebrate Thanksgiving, the Italian way, offering delicious food, wine, music, and dancing.  \
-#                 Jackson is in love with Elizabeth.  \
-#                 Richard works at VMWare, Georgia. Jackson is from Elizabeth  , New York.     \
-#                 Bob and Alice are very close friends. They are also secretely in love! This is a very well kept secret in San Francisco but Tyler knows    \
-#                 Dr. Leo Mirani from New York loves to shop at Target"
+input_seq = "Dr. Franklin provides us a chance to celebrate Thanksgiving, the Italian way, offering delicious food, wine, music, and dancing.  \
+                Jackson is in love with Elizabeth.  \
+                Richard works at VMWare, Georgia. Jackson is from Elizabeth  , New York.     \
+                Bob and Alice are very close friends. They are also secretely in love! This is a very well kept secret in San Francisco but Tyler knows    \
+                Dr. Leo Mirani from New York loves to shop at Target"
 
-# print('')
-# print('--------------------------------')
-# start = time.time()
-# ner_map = model.predict(input_seq)
-# print(f'total time: {time.time()-start:.2f} seconds')
-# print('--------------------------------')
-# print(tabulate(ner_map, headers=['Word', 'NER', 'Confidence']))
-# print('--------------------------------')
-
-#%%
-input_seq = "Austria's Chancellor, Sebastian said that the victims included \
-\"an elderly man, an elderly woman, a young passer-by and a waitress.\" In  \
-addition to the four civilians, a gunman was shot dead by police. \
-Authorities have identified the attacker as Fejzulai Kujtim, a 20-year-old \
-Austrian man from 33 miles west of Vienna. Kujtim was a supporter of Islamic State, \
-who was sentenced to 22 months in prison on April 25, 2019 for attempting to travel \
-to Syria to join ISIS, Minister Karl Nehammer told state news agency APA. On December 5, \
-he was released early on parole, it reports. Police in Vienna have arrested 14 people \
-and searched 18 properties in relation to the attack. Initial reports on Monday night \
-said multiple gunmen opened fire at six locations in the city center, as residents savored \
- the final hours of freedom before the imposition of a nationwide lockdown. \
-But authorities have since cast doubt on whether the man police shot was part \
-of a larger group. Austrian police said Tuesday morning \"they assume that there  \
-were more attackers\" said at the press conference, \"it can't be excluded that \
-there were more attackers.\" Austrian authorities told CNN they cannot rule \
-if a second suspect is on the run. Vienna police spokesperson Christopher \
-Verhnjak said police had been informed by witnesses there could be more than one \
-attacker. Police are investigating and advising people to stay home until they are \
-sure there isn't a suspect in hiding. Armed forces have been deployed in Vienna to \
-help secure the situation, with authorities indicating earlier in the evening that \
-at least one gunman remains on the loose. Residents of Vienna have been asked to stay \
-at home or in a safe place and follow the news. Authorities have abandoned compulsory \
-school attendance and asked citizens to avoid the city center for fears of another attacker \
-still at large. Earlier, Vienna police said that SWAT teams entered the gunman's apartment \
-using explosives and a search of its surroundings was underway. Police have also received \
-more than 20,000 videos from members of the public following the attack The initial \
-attack, which began around 8 p.m., was centered on the busy shopping and dining \
-district near Vienna's main synagogue, Seitenstettengasse Temple, which was closed. \
-The five other locations were identified as Salzgries, Fleischmarkt, Bauernmarkt, \
-Graben and, Morzinplatz near the Temple, according to an Austrian law enforcement \
-source speaking to journalists on Tuesday. Vienna mayor Michael Ludwig said shots \
-appeared to be fired at random, as people dined and drank outside due to the warm \
-weather and virus concerns. Julia Hiermann, who lives in Vienna, was having drinks \
-with a friend when the shooting began. "
-
-print('----------------------------------------')
+print('')
+print('--------------------------------')
 start = time.time()
 ner_map = model.predict(input_seq)
 print(f'total time: {time.time()-start:.2f} seconds')
-print('----------------------------------------')
+print('--------------------------------')
 print(tabulate(ner_map, headers=['Word', 'NER', 'Confidence']))
-print('----------------------------------------')
+print('--------------------------------')
+
+#%%
+# input_seq = "Austria's Chancellor, Sebastian said that the victims included \
+# \"an elderly man, an elderly woman, a young passer-by and a waitress.\" In  \
+# addition to the four civilians, a gunman was shot dead by police. \
+# Authorities have identified the attacker as Fejzulai Kujtim, a 20-year-old \
+# Austrian man from 33 miles west of Vienna. Kujtim was a supporter of Islamic State, \
+# who was sentenced to 22 months in prison on April 25, 2019 for attempting to travel \
+# to Syria to join ISIS, Minister Karl Nehammer told state news agency APA. On December 5, \
+# he was released early on parole, it reports. Police in Vienna have arrested 14 people \
+# and searched 18 properties in relation to the attack. Initial reports on Monday night \
+# said multiple gunmen opened fire at six locations in the city center, as residents savored \
+#  the final hours of freedom before the imposition of a nationwide lockdown. \
+# But authorities have since cast doubt on whether the man police shot was part \
+# of a larger group. Austrian police said Tuesday morning \"they assume that there  \
+# were more attackers\" said at the press conference, \"it can't be excluded that \
+# there were more attackers.\" Austrian authorities told CNN they cannot rule \
+# if a second suspect is on the run. Vienna police spokesperson Christopher \
+# Verhnjak said police had been informed by witnesses there could be more than one \
+# attacker. Police are investigating and advising people to stay home until they are \
+# sure there isn't a suspect in hiding. Armed forces have been deployed in Vienna to \
+# help secure the situation, with authorities indicating earlier in the evening that \
+# at least one gunman remains on the loose. Residents of Vienna have been asked to stay \
+# at home or in a safe place and follow the news. Authorities have abandoned compulsory \
+# school attendance and asked citizens to avoid the city center for fears of another attacker \
+# still at large. Earlier, Vienna police said that SWAT teams entered the gunman's apartment \
+# using explosives and a search of its surroundings was underway. Police have also received \
+# more than 20,000 videos from members of the public following the attack The initial \
+# attack, which began around 8 p.m., was centered on the busy shopping and dining \
+# district near Vienna's main synagogue, Seitenstettengasse Temple, which was closed. \
+# The five other locations were identified as Salzgries, Fleischmarkt, Bauernmarkt, \
+# Graben and, Morzinplatz near the Temple, according to an Austrian law enforcement \
+# source speaking to journalists on Tuesday. Vienna mayor Michael Ludwig said shots \
+# appeared to be fired at random, as people dined and drank outside due to the warm \
+# weather and virus concerns. Julia Hiermann, who lives in Vienna, was having drinks \
+# with a friend when the shooting began. "
+
+# print('----------------------------------------')
+# start = time.time()
+# ner_map = model.predict(input_seq)
+# print(f'total time: {time.time()-start:.2f} seconds')
+# print('----------------------------------------')
+# print(tabulate(ner_map, headers=['Word', 'NER', 'Confidence']))
+# print('----------------------------------------')
 #%%
 # input_seq = "Dr. Franklin provides us a chance to celebrate Thanksgiving, the Italian way, offering delicious food, wine, music, and dancing.  \
 #                 Jackson is in love with Elizabeth.  \

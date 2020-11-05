@@ -98,7 +98,7 @@ class Ner:
         with torch.no_grad():
             t = time.time()
             logits = self.model(input_ids, segment_ids, input_mask,valid_ids)
-            if verbose: print(f'inference times: {time.time()-t:0.2f} seconds')
+            if verbose: print(f'inference times: {(time.time()-start)*1000:.0f} milliseconds')
 
         logits = F.softmax(logits,dim=2)
         logits_label = torch.argmax(logits,dim=2)
@@ -138,7 +138,7 @@ model = Ner("out_base/")
 # print('--------------------------------')
 # start = time.time()
 # ner_map = model.predict(input_seq)
-# print(f'total time: {time.time()-start:.2f} seconds')
+# print(f'total time: {(time.time()-start)*1000:.0f} milliseconds')
 # print('--------------------------------')
 # print(tabulate(ner_map, headers=['Word', 'NER', 'Confidence']))
 # print('--------------------------------')
@@ -182,7 +182,7 @@ with a friend when the shooting began."
 print('----------------------------------------')
 start = time.time()
 ner_map = model.predict(input_seq)
-print(f'total time: {time.time()-start:.2f} seconds')
+print(f'total time: {(time.time()-start)*1000:.0f} milliseconds')
 print('----------------------------------------')
 print(tabulate(ner_map, headers=['Word', 'NER', 'Confidence']))
 print('----------------------------------------')
@@ -203,4 +203,4 @@ print('----------------------------------------')
 # ner_maps = []
 # for i in range(len(input_texts)):
 #     ner_maps += model.predict(input_texts[i], verbose = False)
-# print(f'total time: {time.time()-start:.2f} seconds')
+# print(f'total time: {(time.time()-start)*1000:.0f} milliseconds')
